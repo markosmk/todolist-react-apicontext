@@ -1,6 +1,94 @@
-.container {
+:root {
+}
+
+* {
+  box-sizing: border-box;
+}
+main {
   text-align: center;
-  max-width: 900px;
+  max-width: 600px;
   margin: 0 auto;
   padding: 20px;
+}
+h1 > span {
+  font-size: 1.5rem;
+  color: #ccc;
+}
+ul {
+  list-style: none;
+  padding: 20px;
+  border: 1px solid #eee;
+  border-radius: 12px;
+}
+ul > h4 {
+  color: #ccc;
+}
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border: 2px solid #fae6a2;
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+li span {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+li.checked {
+  border-color: #ccc;
+  border-style: dashed;
+}
+li.checked span {
+  text-decoration: line-through wavy;
+  color: #9d9d9d;
+}
+li:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+li:active {
+  transform: translateY(2px);
+}
+.task-description {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+li small {
+  margin-top: 4px;
+  color: #9d9d9d;
+}
+input {
+  width: 100%;
+  font-size: 1.2rem;
+  padding: 16px;
+  border: 2px solid transparent;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  background-color: #eee;
+  transition: 0.2s;
+}
+input:focus {
+  border: 2px solid #ccc;
+  border-color: #28d59e;
+  background-color: #fff;
+  outline: none;
+}
+
+button {
+  display: block;
+  border: none;
+  padding: 6px 8px;
+  background-color: #fae6a2;
+  border-radius: 8px;
+  color: #675c37;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #ffda60;
 }

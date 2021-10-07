@@ -14,13 +14,31 @@ export const taskReducer = (state, action) => {
    */
   switch (action.type) {
     case Action.ADD_TASK: {
-      return;
+      return [...state, action.task];
     }
     case Action.CHECK_TASK: {
-      return;
+      //const index = state.find(item => item.id === action.task.id)
+      // solve with find()
+      /*return state.find((item) => {
+        if (item.id === action.task.id) {
+          item.isCheked = action.task.isChecked;
+          return true;
+        }
+        return false;
+      });
+      */
+      // solve with map()
+      return state.map((item) => {
+        if (item.id === action.task.id) {
+          item.isChecked = action.task.isChecked;
+        }
+        return item;
+      });
+      //const taskIndex = state.findIndex
+      // return;
     }
     case Action.REMOVE_TASK: {
-      return;
+      return state.filter((task) => task.id !== action.id);
     }
     default:
       return state;
