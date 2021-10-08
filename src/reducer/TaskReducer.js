@@ -16,6 +16,9 @@ export const taskReducer = (state, action) => {
     case Action.ADD_TASK: {
       return [...state, action.task];
     }
+    /**
+     * Este caso es particular, ya que necesitamos cambiar una tarea especifica dentro del array, para ello utilizaremos el id del task
+     */
     case Action.CHECK_TASK: {
       //const index = state.find(item => item.id === action.task.id)
       // solve with find()
